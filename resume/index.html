@@ -4,6 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: inline-block;
+        }
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            font-size: 14px;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -15,6 +76,62 @@
             <li><a href="https://ferdgitucsd.github.io/portfolio/resume/">Resume</a></li>
         </ul>
     </nav>
-    <h1>Resume</h1>
+    
+    <header>
+        <h1>Fred Danese</h1>
+        <p>San Diego, CA | <a href="mailto:fdanese@ucsd.edu">fdanese@ucsd.edu</a> | <a href="https://linkedin.com/in/fdanese" target="_blank">LinkedIn</a></p>
+    </header>
+
+    <section>
+        <h2>Education</h2>
+        <article>
+            <h3>UC San Diego</h3>
+            <p>Data Science, GPA 3.26<br>Graduation: March 2026</p>
+        </article>
+        <article>
+            <h3>Mira Mesa High School</h3>
+            <p>GPA 4.0, Top Scholar Award<br>Graduation: June 2021</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <p><strong>Programming:</strong> Python, Java, R, HTML, SQL</p>
+        <p><strong>Tools and Packages:</strong> Git, Github, Pandas, SKLearn, Requests, BeautifulSoup</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <article>
+            <h3>Analyzing Patterns in Major Power Outages</h3>
+            <p>Conducted a comprehensive data analysis to explore patterns in the timing and location of major power 
+                <br>outages in the continental U.S. Utilized Python for data cleaning, statistical testing, and predictive modeling. <a href="https://fdanese.github.io/power-outages/">Link</a></p>
+        </article>
+        <article>
+            <h3>Language Modeling with N-Grams</h3>
+            <p>Developed language models using N-Gram techniques to analyze text and predict word sequences.</p>
+        </article>
+        <article>
+            <h3>Analysis of Loan Data and Patterns</h3>
+            <p>Analyzed a rich dataset of loan applications to identify patterns and anomalies.</p>
+        </article>
+        <article>
+            <h3>Basic Song Recommender</h3>
+            <p>Implemented a song recommender system using Python and Spotify data.</p>
+        </article>
+        <article>
+            <h3>Basic Image Processing Tool</h3>
+            <p>Developed a Python-based image processing application with advanced features.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Interests</h2>
+        <ul>
+            <li>3D Printing</li>
+            <li>Laser Engraving</li>
+            <li>Custom PC Building</li>
+        </ul>
+    </section>
 </body>
 </html>
