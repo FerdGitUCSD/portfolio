@@ -3,14 +3,13 @@ html {
 }
 
 body {
-    
+    font-family: Arial, sans-serif;
     font: 100%/1.5;
     max-width: 100ch;
     margin-inline: max(1em, (100% - 100ch) / 2);
 }  
 
 nav {
-    font-family: Arial, sans-serif;
     display: flex;
     text-align: center;
     margin-bottom: 5px;
@@ -45,6 +44,17 @@ a.current {
     padding-bottom: calc(0.5em - 0.4em);
 }
 
-form {
-    font: inherit;
+input, textarea, button {
+    font: inherit; 
+    box-sizing: border-box
+}
+
+label, input, textarea, button {
+    display: block; 
+    width: 100%;
+    margin-bottom: 1rem; 
+}
+
+label {
+    margin-block: 0.5rem;
 }
