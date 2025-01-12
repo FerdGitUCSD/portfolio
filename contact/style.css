@@ -44,17 +44,24 @@ a.current {
     padding-bottom: calc(0.5em - 0.4em);
 }
 
-input, textarea, button {
-    font: inherit; 
-    box-sizing: border-box
-}
-
-label, input, textarea, button {
-    display: block; 
-    width: 100%;
-    margin-bottom: 1rem; 
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
 }
 
 label {
-    margin-block: 0.5rem;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+}
+
+button {
+    grid-column: 1 / -1;
+}
+
+input, textarea, button {
+    font: inherit; 
+    box-sizing: border-box;
+    width: 100%;
 }
