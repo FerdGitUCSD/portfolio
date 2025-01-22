@@ -31,3 +31,6 @@ if (currentLink) {
     // or if (currentLink !== undefined)
     currentLink?.classList.add('current');
 }
+
+const ARE_WE_HOME = document.documentElement.classList.contains('home');
+url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
