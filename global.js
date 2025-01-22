@@ -38,4 +38,4 @@ if (currentLink) {
 }
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
-url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+url = !ARE_WE_HOME && !url.startsWith('http') ? 'portfolio/' + url : url;
