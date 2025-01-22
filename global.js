@@ -19,7 +19,11 @@ document.body.prepend(nav);
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
 for (let p of pages) {
-  let url = p.url;
+  let url = p.url.startsWith('http') // Handle absolute URLs
+    ? p.url
+    : ARE_WE_HOME // Handle links on the home page
+    ? p.url
+    : '../' + p.url; // Prepend "../" for non-home pages
   let title = p.title;
   nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
 }
@@ -35,4 +39,3 @@ if (currentLink) {
     currentLink?.classList.add('current');
 }
 
-url = !ARE_WE_HOME && !url.startsWith('http') ? 'portfolio/' + url : url;
