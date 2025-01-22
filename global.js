@@ -4,6 +4,11 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+const BASE_URL = window.location.pathname.startsWith('/portfolio')
+  ? '/portfolio'
+  : '';
+
+
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
