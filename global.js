@@ -10,10 +10,10 @@ const BASE_URL = window.location.pathname.startsWith('/portfolio')
 
 
 let pages = [
-    { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'resume/', title: 'Resume'},
-    { url: 'contact/', title: 'Contact'},
+    { url: 'portfolio/', title: 'Home' },
+    { url: 'portfolio/projects/', title: 'Projects' },
+    { url: 'portfolio/resume/', title: 'Resume'},
+    { url: 'portfolio/contact/', title: 'Contact'},
     { url: 'https://github.com/FerdGitUCSD/', title: 'Profile'},
   ];
 
@@ -36,6 +36,3 @@ if (currentLink) {
     // or if (currentLink !== undefined)
     currentLink?.classList.add('current');
 }
-
-const ARE_WE_HOME = document.documentElement.classList.contains('home');
-url = !ARE_WE_HOME && !url.startsWith('http') ? 'portfolio/' + url : url;
