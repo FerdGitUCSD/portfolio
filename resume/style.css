@@ -41,10 +41,13 @@ h1 {
 h2 {
     font-size: 24px;
     font-weight: bold;
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid oklch(50% 10% 200 / 70%);
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
+
+
+
 h3 {
     font-size: 18px;
     font-weight: bold;
@@ -71,4 +74,15 @@ a {
 a.current {
     border-bottom: 0.4em solid oklch(50% 10% 200 / 40%);
     padding-bottom: calc(0.5em - 0.4em);
+}
+
+.color-scheme {
+    position: absolute; /* Take the element out of the normal document flow */
+    top: 1rem; /* Offset 1rem from the top */
+    right: 1rem; /* Offset 1rem from the right */
+    font-size: 80%; /* Reduce font size for subtlety */
+    font-family: inherit; /* Inherit font from parent to maintain consistency */
+    padding: 0.5rem; /* Add some padding */
+    border-radius: 0.5rem; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears above other content */
 }

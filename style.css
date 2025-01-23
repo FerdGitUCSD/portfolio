@@ -59,7 +59,6 @@ a.current {
     right: 1rem; /* Offset 1rem from the right */
     font-size: 80%; /* Reduce font size for subtlety */
     font-family: inherit; /* Inherit font from parent to maintain consistency */
-    background-color: var(--nav-bg, #f0f0f0); /* Optional: background for visibility */
     padding: 0.5rem; /* Add some padding */
     border-radius: 0.5rem; /* Rounded corners */
     z-index: 1000; /* Ensure it appears above other content */
