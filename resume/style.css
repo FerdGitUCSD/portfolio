@@ -1,5 +1,6 @@
 html {
     --color-accent: oklch(45% 0.20 240);
+    color-scheme: light 
 }
 
 body {
@@ -7,6 +8,7 @@ body {
     font: 100%/1.5;
     max-width: 100ch;
     margin-inline: max(1em, (100% - 100ch) / 2);
+    
 }
 
 header {
@@ -19,11 +21,11 @@ nav {
     margin-bottom: 5px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    border-bottom-color: oklch(50% 10% 200 / 40%);
 }
 
 nav a:hover {
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: oklch(50% 0.2 240 / 13%);
     border-bottom: 0.4em solid oklch(90% 0.65 240);
     padding-bottom: calc(0.5em - 0.4em);
 }
@@ -67,6 +69,6 @@ a {
 }
 
 a.current {
-    border-bottom: 0.4em solid oklch(80% 3% 200);
+    border-bottom: 0.4em solid oklch(50% 10% 200 / 40%);
     padding-bottom: calc(0.5em - 0.4em);
 }

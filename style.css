@@ -1,5 +1,6 @@
 html {
     --color-accent: oklch(45% 0.20 240);
+    color-scheme: light dark
 }
 
 body {
@@ -23,11 +24,11 @@ nav {
     margin-bottom: 5px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    border-bottom-color: oklch(50% 10% 200 / 40%);
 }
 
 nav a:hover {
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: oklch(50% 0.2 240 / 13%);
     border-bottom: 0.4em solid oklch(90% 0.65 240);
     padding-bottom: calc(0.5em - 0.4em);
 }
@@ -48,7 +49,19 @@ a {
 }
 
 a.current {
-    border-bottom: 0.4em solid oklch(80% 3% 200);
+    border-bottom: 0.4em solid oklch(50% 10% 200 / 40%);
     padding-bottom: calc(0.5em - 0.4em);
+}
+
+.color-scheme {
+    position: absolute; /* Take the element out of the normal document flow */
+    top: 1rem; /* Offset 1rem from the top */
+    right: 1rem; /* Offset 1rem from the right */
+    font-size: 80%; /* Reduce font size for subtlety */
+    font-family: inherit; /* Inherit font from parent to maintain consistency */
+    background-color: var(--nav-bg, #f0f0f0); /* Optional: background for visibility */
+    padding: 0.5rem; /* Add some padding */
+    border-radius: 0.5rem; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears above other content */
 }
 
