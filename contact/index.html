@@ -8,28 +8,21 @@
     <script src="../global.js" type="module"></script>
 </head>
 <body>
-    <!-- <nav>
-        <ul>
-            <li><a href="https://ferdgitucsd.github.io/portfolio/">Home</a></li>
-            <li><a href="https://ferdgitucsd.github.io/portfolio/projects/">Projects</a></li>
-            <li><a href="https://ferdgitucsd.github.io/portfolio/resume/">Resume</a></li>
-            <li><a href="https://ferdgitucsd.github.io/portfolio/contact/">Contact</a></li>
-            <li><a href="https://github.com/FerdGitUCSD" target="_blank">Profile</a></li>
-        </ul>
-    </nav> -->
     <h1>Contact me</h1>
-    <form action="mailto:fdanese@ucsd.edu" method="POST" enctype="text/plain">
+    <form action="mailto:fdanese@ucsd.edu" method="POST" enctype="text/plain" id="my-form">
         <label>
-            Email: <input name="email" tpye="email">
+            Email: <input name="email" type="email" required>
         </label>
+        <br>
         <label>
-            Subject: <input name="subject">
+            Subject: <input name="subject" required>
         </label>
+        <br>
         <label>
-            Message: <textarea name="body"></textarea>
+            Message: <textarea name="body" required></textarea>
         </label>
-
-        <button>Submit</button>
+        <br>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
