@@ -4,6 +4,23 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+const form = document.querySelector('form');
+
+form?.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const data = new FormData(form);
+
+  let url = form.action + '?';
+
+  for (let [name, value] of data) {
+    url += `${encodeURIComponent(name)}=${encodeURIComponent(value)}&`;
+  }
+
+  location.href = url;
+});
+
+
 document.body.insertAdjacentHTML(
     'afterbegin',
     `
@@ -79,36 +96,4 @@ if (currentLink) {
     currentLink?.classList.add('current');
 }
 
-/*
-const form = document.querySelector('#my-form');
 
-form?.addEventListener('submit', function (event) {
-  // Prevent default form submission
-  event.preventDefault();
-
-  // Create FormData object
-  const data = new FormData(form);
-
-  // Start building the mailto URL
-  let mailtoURL = 'mailto:fdanese@ucsd.edu?';
-  let params = [];
-
-  // Iterate over form data and encode the parameters
-  for (let [name, value] of data) {
-    if (value.trim() !== "") { // Skip empty fields
-      let encodedName = encodeURIComponent(name);
-      let encodedValue = encodeURIComponent(value);
-      params.push(`${encodedName}=${encodedValue}`);
-    }
-  }
-
-  // Append parameters to the URL
-  mailtoURL += params.join('&');
-
-  // Log the URL for debugging
-  console.log('Generated mailto URL:', mailtoURL);
-
-  // Open the mail client with the constructed URL
-  window.location.href = mailtoURL;
-});
-*/
