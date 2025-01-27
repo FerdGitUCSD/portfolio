@@ -125,7 +125,7 @@ export async function fetchJSON(url) {
     }
 }
 
-const projects = fetchJSON("/lib/projects.json")
+const projects = fetchJSON("./lib/projects.json")
 
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
@@ -147,7 +147,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         containerElement.appendChild(article);
     }
 }
-
+ 
 /*
 document.addEventListener("DOMContentLoaded", async () => {
     // Fetch the container element for the projects
