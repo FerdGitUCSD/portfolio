@@ -148,36 +148,6 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     }
 }
  
-/*
-document.addEventListener("DOMContentLoaded", async () => {
-    // Fetch the container element for the projects
-    const containerElement = document.querySelector('.projects'); // Ensure this class matches your HTML
-    if (!containerElement) {
-        console.error("Projects container not found");
-        return;
-    }
 
-    // Fetch the projects data
-    const projects = await fetchJSON("./lib/projects.json");
-    if (projects) {
-        console.log("Rendering with h2 headers:");
-        renderProjects(projects, containerElement, 'h2');
 
-        setTimeout(() => {
-            console.log("Rendering with h3 headers:");
-            renderProjects(projects, containerElement, 'h3');
-        }, 3000);
-
-        setTimeout(() => {
-            console.log("Rendering with h4 headers:");
-            renderProjects(projects, containerElement, 'h4');
-        }, 6000);
-
-        setTimeout(() => {
-            console.log("Rendering with invalid heading level (fallback to h2):");
-            renderProjects(projects, containerElement, 'invalid');
-        }, 9000);
-    }
-});
-*/
 
