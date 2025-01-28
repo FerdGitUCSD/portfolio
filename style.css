@@ -76,7 +76,7 @@ h2.profile {
 #profile-stats dt {
     grid-row: 1;
     text-align: left;
-    color: #666; 
+    color: #888; 
 }
 #profile-stats dd {
     grid-row: 2;
@@ -84,6 +84,5 @@ h2.profile {
     text-align: left;
     font-weight: 90;
     margin: 0;
-    color: #000; 
     padding-bottom: 3rem;
 }
