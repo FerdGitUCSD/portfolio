@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;;
     font: 100%/1.5;
     max-width: 100ch;
     margin-inline: max(1em, (100% - 100ch) / 2);
