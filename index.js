@@ -10,7 +10,7 @@ export async function fetchGitHubData(username) {
     return fetchJSON(`https://api.github.com/users/${username}`);
   }
 
-const githubData = await fetchGitHubData('giorgianicolaou');
+const githubData = await fetchGitHubData('ferdgitUCSD');
 
 const profileStats = document.querySelector('#profile-stats');
 

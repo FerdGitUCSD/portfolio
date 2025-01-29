@@ -111,19 +111,26 @@ if (currentLink) {
 
 export async function fetchJSON(url) {
     try {
-        // Fetch the JSON file from the given URL
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch projects: ${response.statusText}`);
-        }
-        const data = await response.json();
-        //console.log("Fetched JSON Data:", data);
-        return data; 
-        
+      const response = await fetch(url);
+  
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+      }
+  
+      const data = await response.json();
+      console.log('Fetched data:', data); 
+      return data;
     } catch (error) {
-        console.error('Error fetching or parsing JSON data:', error);
+      if (url.startsWith('../')) {
+        const new_url = url.substring(3)
+        const response = await fetch(new_url);
+        const data = await response.json();
+        console.log('Fetched data:', data); 
+        return data;
+      }
+      console.error('Error fetching or parsing JSON data:', error);
     }
-}
+  }
 
 // const projects = fetchJSON("../lib/projects.json")
 
