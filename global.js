@@ -125,7 +125,7 @@ export async function fetchJSON(url) {
     }
 }
 
-const projects = fetchJSON("../lib/projects.json")
+// const projects = fetchJSON("../lib/projects.json")
 
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
