@@ -1,62 +1,74 @@
 [
     {
-        "title": "Power Outage Analysis.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "This is a project I completed in order to test my data science skills. It includes data wrangling, analysis, hypotheis testing, missingness testing, and some machine learning."
+        "title": "Power Outage Analysis",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "My final project for DSC 80, where I analyzed power outage data to find trends in time and location. The project included extensive data cleaning, exploratory data analysis, statistical inference, and predictive modeling."
     },
     {
-        "title": "Voluptas veniam minima quidem.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolores rerum ut facilis ipsam animi, delectus quidem, cum saepe voluptas a aspernatur, libero provident repudiandae architecto dignissimos! Recusandae, rerum illo eius voluptates ea pariatur inventore consequatur laboriosam quibusdam voluptate."
+        "title": "My First Website",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "This was my first experience creating a website. I learned the fundamentals of HTML and how to structure content for the web."
     },
     {
-        "title": "Voluptatem ducimus sapiente architecto.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Enim perferendis voluptatem quae totam? Iste exercitationem nihil ipsum mollitia quod voluptate corrupti atque ipsam tenetur, odio tempora vitae provident assumenda sed ad quam perspiciatis quo repellat veritatis necessitatibus dolor."
+        "title": "Styling with CSS",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "This lab introduced me to CSS, where I learned how to style my website, apply layouts, and enhance visual appeal."
     },
     {
-        "title": "Assumenda, esse? Officia, minus.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Autem ad accusantium et qui labore officiis tenetur dicta, dolores error rem quam adipisci perferendis saepe omnis fugiat, molestiae quas aspernatur iusto! Laudantium, fugit. Accusamus esse dolore ullam nisi eum."
+        "title": "Introduction to JavaScript",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "This was my first exposure to JavaScript. I learned how to make web pages interactive using event listeners and dynamic content updates."
     },
     {
-        "title": "Laboriosam molestias minus tempora?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Corporis repudiandae omnis minus a quis officia soluta consequuntur ex temporibus quod maxime, aliquam aspernatur. Molestiae maiores repellat blanditiis dolore iusto fugiat, excepturi illo necessitatibus, quaerat, voluptatem temporibus dolorum accusamus."
+        "title": "JavaScript Automation",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "I explored more advanced JavaScript concepts, including loops, functions, and automating web page behaviors."
     },
     {
-        "title": "Voluptates obcaecati doloremque provident.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quo ipsam voluptatum nostrum harum! Dicta esse itaque recusandae necessitatibus excepturi impedit possimus sunt? Iure ratione labore, beatae excepturi maiores ipsa reprehenderit eaque animi quibusdam voluptatum, voluptates, rerum voluptatibus voluptate."
+        "title": "Project 1: Expository Visualization",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "This was my first professionally aimed visualization project, where I used Tableau for the first time. I focused on clarity, storytelling, and effective data representation."
     },
     {
-        "title": "Adipisci officia laborum doloremque!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Aperiam error omnis voluptate amet quisquam? Dolore sit voluptas hic minima repellat architecto, ullam ipsum molestiae reprehenderit voluptate numquam adipisci quasi qui iusto vero accusantium odit porro itaque illum. Sunt."
+        "title": "Project 2: Deceptive Visualization",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "In this project, I created both an earnest and a deceptive visualization to explore their impacts and effectiveness. This helped me understand how data representation influences interpretation."
     },
     {
-        "title": "Accusantium voluptate illum aut.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nobis, pariatur laboriosam ab eveniet omnis magni autem id illo perferendis ut iusto commodi? Provident sed quis voluptates voluptas sapiente, dicta, quam ut voluptatem eaque voluptatum itaque nobis, ratione odio!"
+        "title": "Analysis of Loan Data and Patterns",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Analyzed and processed a rich dataset of loan applications to identify patterns and anomalies, including implementing functions to detect logical paradoxes in the data. Applied data visualization techniques to explore trends."
     },
     {
-        "title": "Nesciunt a mollitia nam!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Molestias eos libero placeat laborum possimus earum dolore. Fugit velit necessitatibus commodi totam quasi sunt quos quas sit exercitationem tempora aut nobis, eligendi, aperiam aliquid recusandae quidem reprehenderit ea doloribus?"
+        "title": "Basic Song Recommender",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Implemented a song recommender system using Python and pandas for analyzing Spotify data on Taylor Swift's discography; implemented features like song recommendations based on user preferences and a lyric search tool to identify songs by lyric matches."
     },
     {
-        "title": "Tempora nisi quod molestiae!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ullam, enim, velit eaque provident, magnam minima sed nostrum veritatis natus quaerat asperiores eveniet illum nobis ratione commodi perspiciatis placeat voluptate vero tenetur iure! Totam praesentium recusandae sequi ipsum? Ipsam."
+        "title": "Basic Image Processing Tool",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Developed a Python-based image processing application, implementing advanced features like color manipulation, image rotation, and a K-Nearest Neighbors classifier without external libraries."
     },
     {
-        "title": "Quod numquam magnam vitae?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Sint iste aliquid fugiat soluta consequatur maiores dolor, provident quas perspiciatis delectus, explicabo id cum temporibus quidem consequuntur corporis. Cupiditate nemo molestiae repellat perspiciatis, quia dicta sint doloribus omnis voluptas!"
+        "title": "Analysis of the Global Data Science Community",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "Using the 2020 Kaggle Machine Learning & Data Science Survey, this project explored programming language trends, education-job role relationships, and industry compensation patterns. A regression model analyzed key factors influencing salaries, highlighting the complexity of data science career trajectories."
     },
     {
-        "title": "Minima veritatis consequuntur quibusdam!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Mollitia ad blanditiis qui voluptate accusamus odit quia magni facere iure maxime dolore reprehenderit dignissimos cumque sed deserunt similique inventore est, quae doloremque eius doloribus adipisci id voluptas perspiciatis! Quas."
-    }
+        "title": "Analyzing Social Mobility and Political Ideology",
+        "year": "2024",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "This homework examined the relationship between social mobility and political ideology using economic and voting data. I applied regression analysis and hypothesis testing to identify correlations and geographic trends, gaining insights into how economic opportunity aligns with political preferences."
+    }   
 ]
