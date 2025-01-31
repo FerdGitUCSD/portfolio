@@ -13,31 +13,31 @@
     },
     {
         "title": "Styling with CSS",
-        "year": "2024",
+        "year": "2025",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
         "description": "This lab introduced me to CSS, where I learned how to style my website, apply layouts, and enhance visual appeal."
     },
     {
         "title": "Introduction to JavaScript",
-        "year": "2024",
+        "year": "2025",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
         "description": "This was my first exposure to JavaScript. I learned how to make web pages interactive using event listeners and dynamic content updates."
     },
     {
         "title": "JavaScript Automation",
-        "year": "2024",
+        "year": "2025",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
         "description": "I explored more advanced JavaScript concepts, including loops, functions, and automating web page behaviors."
     },
     {
         "title": "Project 1: Expository Visualization",
-        "year": "2024",
+        "year": "2025",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
         "description": "This was my first professionally aimed visualization project, where I used Tableau for the first time. I focused on clarity, storytelling, and effective data representation."
     },
     {
         "title": "Project 2: Deceptive Visualization",
-        "year": "2024",
+        "year": "2025",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
         "description": "In this project, I created both an earnest and a deceptive visualization to explore their impacts and effectiveness. This helped me understand how data representation influences interpretation."
     },
@@ -49,13 +49,13 @@
     },
     {
         "title": "Basic Song Recommender",
-        "year": "2024",
+        "year": "2023",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
         "description": "Implemented a song recommender system using Python and pandas for analyzing Spotify data on Taylor Swift's discography; implemented features like song recommendations based on user preferences and a lyric search tool to identify songs by lyric matches."
     },
     {
         "title": "Basic Image Processing Tool",
-        "year": "2024",
+        "year": "2023",
         "image": "https://dsc106.com/labs/lab02/images/empty.svg",
         "description": "Developed a Python-based image processing application, implementing advanced features like color manipulation, image rotation, and a K-Nearest Neighbors classifier without external libraries."
     },
