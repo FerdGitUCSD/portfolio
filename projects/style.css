@@ -25,13 +25,6 @@ nav a:hover {
     padding-bottom: calc(0.5em - 0.4em);
 }
 
-ul {
-    display: contents
-}
-li {
-    display: contents
-}
-
 a {
     flex: 1;
     text-decoration: none;
@@ -78,4 +71,55 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.5rem; /* Add some padding */
     border-radius: 0.5rem; /* Rounded corners */
     z-index: 1000; /* Ensure it appears above other content */
+}
+
+svg {
+    max-width: 20em;
+    margin-block: 2em;
+  
+    /* Do not clip shapes outside the viewBox */
+    overflow: visible;
+  }
+
+.container {
+    display: flex;
+    align-items: center;
+    
+    gap: 2em;
+    justify-content: center;
+}
+
+ul.legend {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+    gap: 1em;
+    padding: 0.5em;
+    border: 2px solid oklch(50% 10% 200 / 40%);
+    border-radius: 5px;
+}
+
+ul.legend li {
+    display: flex;
+    gap: 0.5em;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.5em 0.5em;
+    
+}
+
+ul.legend li .swatch {
+    width: 1.2em;
+    height: 1.2em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--color);
+}
+
+
+
+ul.legend li .value {
+    color: grey;
+    font-style: italic;
 }
