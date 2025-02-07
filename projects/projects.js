@@ -1,75 +1,123 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-
 import { fetchJSON, renderProjects } from '../global.js';
 
 const projects = await fetchJSON('../lib/projects.json');
-
 const projectsContainer = document.querySelector('.projects');
-
-renderProjects(projects, projectsContainer, 'h2');
-
-
-
-// PIE CHART VISUALIZATION
-let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-
-let arc = arcGenerator({
-    startAngle: 0,
-    endAngle: 2 * Math.PI,
-  });
-
-d3.select('svg').append('path').attr('d', arc).attr('fill', 'red');
-
-let rolledData = d3.rollups(
-  projects,
-  (v) => v.length,
-  (d) => d.year,
-);
-
-let data = rolledData.map(([year, count]) => {
-    return { value: count, label: year };
-});
-
-
-let sliceGenerator = d3.pie().value((d) => d.value);
-let arcData = sliceGenerator(data);
-let arcs = arcData.map((d) => arcGenerator(d));
-
-let colors = d3.scaleOrdinal(d3.schemePaired);
-arcs.forEach((arc, idx) => {
-    d3.select('svg')
-      .append('path')
-      .attr('d', arc)
-      .attr('fill', colors(idx));
-})
-
-
-let legend = d3.select('.legend');
-data.forEach((d, idx) => {
-    legend.append('li')
-          .attr('style', `--color:${colors(idx)}`) // Set color dynamically
-          .html(`<span class="swatch"></span> ${d.label} <span class="value">(${d.value})</span>`); // Wrap value in span
-});
-
-
-
-// SEARCH BAR
+const projectsTitle = document.querySelector('.projects-title');
 
 let query = '';
+let selectedIndex = -1;
 
 function setQuery(newQuery) {
-    query = newQuery;
-    // Two thing should happen for this function:
-    // 1) filter projects based on <query>, how can we do this?
-    // 2) return filtered projects
-  }
+  query = newQuery.toLowerCase(); 
+  return projects.filter((project) => {
+    let values = Object.values(project).join('\n').toLowerCase();
+    return values.includes(query);
+  });
+}
+
+function recalculate(projectsGiven) {
+  let newRolledData = d3.rollups(
+    projectsGiven,
+    (v) => v.length,
+    (d) => d.year
+  );
+  return newRolledData.map(([year, count]) => ({
+    value: count,
+    label: year.toString()
+  }));
+}
+
+function embedArcClick(arcsGiven, projectsGiven, dataGiven) {
+  const svg = d3.select('svg');
+  const legend = d3.select('.legend');
   
-let searchInput = document.getElementsByClassName('searchBar')[0];
-  
-  searchInput.addEventListener('change', (event) => {
-    let updatedProjects = setQuery(event.target.value);
-    let filteredProjects = projects.filter((project) => {
-        let values = Object.values(project).join('\n').toLowerCase();
-        return values.includes(query.toLowerCase());
+  svg.selectAll('path').remove();
+  legend.html('');
+
+  arcsGiven.forEach((arc, i) => {
+    svg.append('path')
+      .attr('d', arc)
+      .attr('fill', d3.schemePaired[i])
+      .style('cursor', 'pointer')
+      .on('click', () => {
+        selectedIndex = selectedIndex === i ? -1 : i;
+        
+        svg.selectAll('path').each(function(_, idx) {
+          d3.select(this).classed('selected', idx === selectedIndex);
+        });
+        
+        legend.selectAll('li').each(function(_, idx) {
+          d3.select(this).classed('selected-legend', idx === selectedIndex);
+        });
+
+        if (selectedIndex !== -1) {
+          const selectedYear = dataGiven[selectedIndex].label;
+          const filteredProjects = projectsGiven.filter(project => 
+            project.year.toString() === selectedYear
+          );
+          
+          renderProjects(filteredProjects, projectsContainer, 'h2');
+          if (projectsTitle) {
+            projectsTitle.innerHTML = `${filteredProjects.length} Projects`;
+          }
+
+          legend.html('');
+          const newData = recalculate(filteredProjects);
+          newData.forEach((d) => {
+            legend.append('li')
+              .attr('style', '--color:#d0457c')
+              .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+          });
+        } else {
+          renderProjects(projectsGiven, projectsContainer, 'h2');
+          if (projectsTitle) {
+            projectsTitle.innerHTML = `${projectsGiven.length} Projects`;
+          }
+
+          legend.html('');
+          const newData = recalculate(projectsGiven);
+          newData.forEach((d, idx) => {
+            legend.append('li')
+              .attr('style', `--color:${d3.schemePaired[idx]}`)
+              .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+          });
+        }
       });
   });
+
+  dataGiven.forEach((d, i) => {
+    legend.append('li')
+      .attr('style', `--color:${d3.schemePaired[i]}`)
+      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+  });
+}
+
+function renderPieChartAndLegend(projects) {
+  const data = recalculate(projects);
+  
+  const arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+  const sliceGenerator = d3.pie().value((d) => d.value);
+  const arcData = sliceGenerator(data);
+  const arcs = arcData.map(d => arcGenerator(d));
+
+  embedArcClick(arcs, projects, data);
+}
+
+renderProjects(projects, projectsContainer, 'h2');
+if (projectsTitle) {
+  projectsTitle.innerHTML = `${projects.length} Projects`;
+}
+renderPieChartAndLegend(projects);
+
+const searchInput = document.getElementsByClassName('searchBar')[0];
+searchInput.addEventListener('input', (event) => {
+  const filteredProjects = setQuery(event.target.value);
+  selectedIndex = -1; 
+  
+  renderProjects(filteredProjects, projectsContainer, 'h2');
+  if (projectsTitle) {
+    projectsTitle.innerHTML = `${filteredProjects.length} Projects`;
+  }
+  renderPieChartAndLegend(filteredProjects);
+});

@@ -81,6 +81,20 @@ svg {
     overflow: visible;
   }
 
+svg:has(path:hover) {
+  path:not(:hover) {
+    opacity: 50%;
+  }
+}
+
+path {
+    transition: 300ms;
+    cursor: pointer;
+}
+
+
+
+
 .container {
     display: flex;
     align-items: center;
@@ -118,8 +132,52 @@ ul.legend li .swatch {
 }
 
 
-
 ul.legend li .value {
     color: grey;
     font-style: italic;
+}
+.selected {
+    --color: oklch(60% 45% 0) !important;
+  
+    &:is(path) {
+      fill: var(--color);
+    }
+}
+
+
+
+.searchBar {
+    width: 100%;
+    max-width: 400px;  /* Limits the width on larger screens */
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ccc;  /* Light border */
+    border-radius: 25px;  /* Rounded edges */
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Add focus effect */
+.searchBar:focus {
+    border-color: #007bff; /* Blue focus border */
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Placeholder styling */
+.searchBar::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .searchBar {
+        width: 90%;
+        font-size: 0.9rem;
+    }
 }
