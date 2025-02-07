@@ -155,7 +155,6 @@ ul.legend li .value {
     border-radius: 25px;  /* Rounded edges */
     outline: none;
     transition: all 0.3s ease-in-out;
-    background-color: #f9f9f9;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     display: block;
     margin: 1rem auto;
@@ -164,7 +163,6 @@ ul.legend li .value {
 /* Add focus effect */
 .searchBar:focus {
     border-color: #007bff; /* Blue focus border */
-    background-color: #fff;
     box-shadow: 3px 3px 10px rgba(0, 123, 255, 0.3);
 }
 
