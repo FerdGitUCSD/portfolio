@@ -75,8 +75,8 @@ function displayStats() {
     addStat('Total commits', commits.length);
     addStat('Files', d3.rollups(data, (v) => v.length, (d) => d.file).length);
     addStat('Total <abbr title="Lines of Code">LOC</abbr>', data.length);
-    addStat('Max Depth', d3.max(data, (d) => d.depth));
+    addStat('Average Line Length', d3.mean(data, (d) => d.length).toFixed(2));
     addStat('Longest Line', d3.max(data, (d) => d.length));
-    addStat('Max Lines in a single file', d3.max(d3.rollups(data, (v) => v.length, (d) => d.file), (d) => d[1]));
+    addStat('Longest File', d3.max(d3.rollups(data, (v) => v.length, (d) => d.file), (d) => d[1]));
 
 }

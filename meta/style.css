@@ -64,53 +64,21 @@ a.current {
     z-index: 1000; 
 }
 
-.stats {
+#stats dl {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px 20px;
-    max-width: 400px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    border-radius: 8px;
-    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
-
-.stats dt {
-    font-weight: bold;
-    color: #555;
+#stats dt {
+    grid-row: 1;
+    text-align: left;
+    color: #888; 
 }
-
-.stats dd {
-    font-size: 20px;
-    font-weight: bold;
-    color: #222;
+#stats dd {
+    grid-row: 2;
+    font-size: 2.5rem; 
+    text-align: left;
+    font-weight: 90;
     margin: 0;
-}
-
-/* Add styling for an optional summary box */
-.stats-summary {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    max-width: 600px;
-}
-
-.stats-summary div {
-    font-size: 14px;
-    font-weight: bold;
-    color: #666;
-}
-
-.stats-summary span {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 5px;
+    padding-bottom: 3rem;
 }
