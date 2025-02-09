@@ -78,5 +78,5 @@ function displayStats() {
     addStat('Max Depth', d3.max(data, (d) => d.depth));
     addStat('Longest Line', d3.max(data, (d) => d.length));
     addStat('Max Lines in a single file', d3.max(d3.rollups(data, (v) => v.length, (d) => d.file), (d) => d[1]));
-    
+
 }
