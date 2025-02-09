@@ -63,3 +63,54 @@ a.current {
     border-radius: 0.5rem; 
     z-index: 1000; 
 }
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 20px;
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.stats dt {
+    font-weight: bold;
+    color: #555;
+}
+
+.stats dd {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+}
+
+/* Add styling for an optional summary box */
+.stats-summary {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+.stats-summary div {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+.stats-summary span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
