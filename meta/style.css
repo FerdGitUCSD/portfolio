@@ -1,0 +1,65 @@
+html {
+    --color-accent: oklch(45% 0.20 240);
+    color-scheme: light dark
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font: 100%/1.5;
+    max-width: 100ch;
+    margin-inline: max(1em, (100% - 100ch) / 2);
+    
+    img {
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    margin-bottom: 5px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(50% 10% 200 / 40%);
+}
+
+nav a:hover {
+    background-color: oklch(50% 0.2 240 / 13%);
+    border-bottom: 0.4em solid oklch(90% 0.65 240);
+    padding-bottom: calc(0.5em - 0.4em);
+}
+
+ul {
+    display: contents
+}
+li {
+    display: contents
+}
+
+a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5em;
+}
+
+a.current {
+    border-bottom: 0.4em solid oklch(50% 10% 200 / 40%);
+    padding-bottom: calc(0.5em - 0.4em);
+}
+
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%; 
+    font-family: inherit; 
+    padding: 0.5rem;
+    border-radius: 0.5rem; 
+    z-index: 1000; 
+}
