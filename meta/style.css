@@ -66,19 +66,29 @@ a.current {
 
 #stats dl {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
+    
 }
 #stats dt {
     grid-row: 1;
-    text-align: left;
+    text-align: Left;
+    font-size: 94%;
     color: #888; 
+    
 }
 #stats dd {
     grid-row: 2;
     font-size: 2.5rem; 
-    text-align: left;
+    text-align: Left;
     font-weight: 90;
     margin: 0;
     padding-bottom: 3rem;
+}
+
+.gridlines line {
+    stroke-linecap: round; /* Makes line edges softer */
+    transition: stroke 0.3s ease-in-out; /* Smooth color transitions */
+
+    stroke-dasharray: 5 5; /* Dashed lines instead of solid */
 }
