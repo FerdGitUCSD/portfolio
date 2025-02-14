@@ -253,11 +253,15 @@ function brushSelector() {
 
 let brushSelection = null;
 
+
+
+
 function brushed(event) {
   brushSelection = event.selection;
   updateSelection();
-  
   updateSelectionCount();
+  const selectedCommits = updateSelectionCount();
+  updateLanguageBreakdown(selectedCommits);
 }
 
 function isCommitSelected(commit) {
@@ -291,38 +295,38 @@ function updateSelectionCount() {
     return selectedCommits;
   }
 
-function updateLanguageBreakdown() {
-  const selectedCommits = brushSelection
-    ? commits.filter(isCommitSelected)
-    : [];
-  const container = document.getElementById('language-breakdown');
 
-  if (selectedCommits.length === 0) {
-    container.innerHTML = '';
-    return;
-  }
-  const requiredCommits = selectedCommits.length ? selectedCommits : commits;
-  const lines = requiredCommits.flatMap((d) => d.lines);
 
-  // Use d3.rollup to count lines per language
-  const breakdown = d3.rollup(
-    lines,
-    (v) => v.length,
-    (d) => d.type
-  );
 
-  // Update DOM with breakdown
-  container.innerHTML = '';
-
-  for (const [language, count] of breakdown) {
-    const proportion = count / lines.length;
-    const formatted = d3.format('.1~%')(proportion);
-
-    container.innerHTML += `
-            <dt>${language}</dt>
-            <dd>${count} lines (${formatted})</dd>
-        `;
-  }
-
-  return breakdown;
-}
+function updateLanguageBreakdown(selectedCommits) {
+    const container = document.getElementById('language-breakdown');
+    
+        if (!selectedCommits || selectedCommits.length === 0) {
+            container.innerHTML = '';
+            return;
+        }
+        
+        const selectedLines = data.filter(d => 
+            selectedCommits.some(commit => commit.id === d.commit)
+        );
+    
+        const breakdown = d3.rollup(
+            selectedLines,
+            v => v.length,
+            d => d.type
+        );
+    
+        container.innerHTML = '';
+    
+        for (const [language, count] of breakdown) {
+            const proportion = count / selectedLines.length;
+            const formatted = d3.format('.1~%')(proportion);
+    
+            container.innerHTML += `
+                <dt>${language}</dt>
+                <dd>${count} lines (${formatted})</dd>
+            `;
+        }
+    
+        return breakdown;
+    }
