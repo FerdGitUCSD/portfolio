@@ -1,74 +1,94 @@
 [
     {
-        "title": "Power Outage Analysis",
-        "year": "2024",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "My final project for DSC 80, where I analyzed power outage data to find trends in time and location. The project included extensive data cleaning, exploratory data analysis, statistical inference, and predictive modeling."
+      "title": "Bikewatching Visualization",
+      "year": "2025",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "An interactive map visualization of bike traffic in the Boston area during different times of the day. The data comes from Bluebikes publicly-available bicycle sharing program in the Boston area.",
+      "url": "https://ferdgitucsd.github.io/bikewatching/"
     },
     {
-        "title": "My First Website",
-        "year": "2024",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "This was my first experience creating a website. I learned the fundamentals of HTML and how to structure content for the web."
+      "title": "Power Outage Analysis",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "My final project for DSC 80, where I analyzed power outage data to find trends in time and location. The project included extensive data cleaning, exploratory data analysis, statistical inference, and predictive modeling.",
+      "url": "https://github.com/fdanese/power-outages"
     },
     {
-        "title": "Styling with CSS",
-        "year": "2025",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "This lab introduced me to CSS, where I learned how to style my website, apply layouts, and enhance visual appeal."
+      "title": "My First Website",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "This was my first experience creating a website. I learned the fundamentals of HTML and how to structure content for the web.",
+      "url": "#"
     },
     {
-        "title": "Introduction to JavaScript",
-        "year": "2025",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "This was my first exposure to JavaScript. I learned how to make web pages interactive using event listeners and dynamic content updates."
+      "title": "Styling with CSS",
+      "year": "2025",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "This lab introduced me to CSS, where I learned how to style my website, apply layouts, and enhance visual appeal.",
+      "url": "#"
     },
     {
-        "title": "JavaScript Automation",
-        "year": "2025",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "I explored more advanced JavaScript concepts, including loops, functions, and automating web page behaviors."
+      "title": "Introduction to JavaScript",
+      "year": "2025",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "This was my first exposure to JavaScript. I learned how to make web pages interactive using event listeners and dynamic content updates.",
+      "url": "#"
     },
     {
-        "title": "Project 1: Expository Visualization",
-        "year": "2025",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "This was my first professionally aimed visualization project, where I used Tableau for the first time. I focused on clarity, storytelling, and effective data representation."
+      "title": "JavaScript Automation",
+      "year": "2025",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "I explored more advanced JavaScript concepts, including loops, functions, and automating web page behaviors.",
+      "url": "#"
     },
     {
-        "title": "Project 2: Deceptive Visualization",
-        "year": "2025",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "In this project, I created both an earnest and a deceptive visualization to explore their impacts and effectiveness. This helped me understand how data representation influences interpretation."
+      "title": "Project 1: Expository Visualization",
+      "year": "2025",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "This was my first professionally aimed visualization project, where I used Tableau for the first time. I focused on clarity, storytelling, and effective data representation.",
+      "url": "#"
     },
     {
-        "title": "Analysis of Loan Data and Patterns",
-        "year": "2024",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "Analyzed and processed a rich dataset of loan applications to identify patterns and anomalies, including implementing functions to detect logical paradoxes in the data. Applied data visualization techniques to explore trends."
+      "title": "Project 2: Deceptive Visualization",
+      "year": "2025",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "In this project, I created both an earnest and a deceptive visualization to explore their impacts and effectiveness. This helped me understand how data representation influences interpretation.",
+      "url": "#"
     },
     {
-        "title": "Basic Song Recommender",
-        "year": "2023",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "Implemented a song recommender system using Python and pandas for analyzing Spotify data on Taylor Swift's discography; implemented features like song recommendations based on user preferences and a lyric search tool to identify songs by lyric matches."
+      "title": "Analysis of Loan Data and Patterns",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Analyzed and processed a rich dataset of loan applications to identify patterns and anomalies, including implementing functions to detect logical paradoxes in the data. Applied data visualization techniques to explore trends.",
+      "url": "#"
     },
     {
-        "title": "Basic Image Processing Tool",
-        "year": "2023",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "Developed a Python-based image processing application, implementing advanced features like color manipulation, image rotation, and a K-Nearest Neighbors classifier without external libraries."
+      "title": "Basic Song Recommender",
+      "year": "2023",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Implemented a song recommender system using Python and pandas for analyzing Spotify data on Taylor Swift's discography; implemented features like song recommendations based on user preferences and a lyric search tool to identify songs by lyric matches.",
+      "url": "#"
     },
     {
-        "title": "Analysis of the Global Data Science Community",
-        "year": "2024",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "Using the 2020 Kaggle Machine Learning & Data Science Survey, this project explored programming language trends, education-job role relationships, and industry compensation patterns. A regression model analyzed key factors influencing salaries, highlighting the complexity of data science career trajectories."
+      "title": "Basic Image Processing Tool",
+      "year": "2023",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Developed a Python-based image processing application, implementing advanced features like color manipulation, image rotation, and a K-Nearest Neighbors classifier without external libraries.",
+      "url": "#"
     },
     {
-        "title": "Analyzing Social Mobility and Political Ideology",
-        "year": "2024",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "This homework examined the relationship between social mobility and political ideology using economic and voting data. I applied regression analysis and hypothesis testing to identify correlations and geographic trends, gaining insights into how economic opportunity aligns with political preferences."
-    }   
-]
+      "title": "Analysis of the Global Data Science Community",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Using the 2020 Kaggle Machine Learning & Data Science Survey, this project explored programming language trends, education-job role relationships, and industry compensation patterns. A regression model analyzed key factors influencing salaries, highlighting the complexity of data science career trajectories.",
+      "url": "#"
+    },
+    {
+      "title": "Analyzing Social Mobility and Political Ideology",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "This homework examined the relationship between social mobility and political ideology using economic and voting data. I applied regression analysis and hypothesis testing to identify correlations and geographic trends, gaining insights into how economic opportunity aligns with political preferences.",
+      "url": "#"
+    }
+  ]
+  
