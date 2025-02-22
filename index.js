@@ -16,6 +16,7 @@ const profileStats = document.querySelector('#profile-stats');
 
 if (profileStats) {
     profileStats.innerHTML = `
+          <img src="https://avatars.githubusercontent.com/u/165683831?v=4" alt="GitHub Avatar" width="100">
           <dl>
             <dt>PUBLIC REPOS</dt><dd>${githubData.public_repos}</dd>
             <dt>FOLLOWERS</dt><dd>${githubData.followers}</dd>

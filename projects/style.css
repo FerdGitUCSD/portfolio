@@ -179,3 +179,64 @@ ul.legend li .value {
         font-size: 0.9rem;
     }
 }
+
+
+/* ----------------------------- Projects ----------------------------- */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em;
+}
+
+.projects article {
+    display: grid;
+    grid-template-rows: auto;
+    grid-row: span 3;
+    gap: 0.5em;
+    background-color: var(--background-color);
+    border: 1px solid oklch(50% 10% 200 / 40%);
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.projects article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.projects article h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.projects article h2,
+.projects article p {
+    color: var(--text-color);
+}
+
+.projects article p {
+    margin: 0.5em 0 0;
+}
+
+.project-year {
+    color: rgb(100, 100, 100);
+    font-family: Baskerville, serif;
+    font-variant-numeric: oldstyle-nums;
+    font-size: 1em;
+}
+
+
+img:hover {
+    transform: scale(1.02);
+}
+
+article {
+    transition: transform 0.3s ease-in-out;
+}
+
+article:hover {
+    transform: scale(1.02);
+}

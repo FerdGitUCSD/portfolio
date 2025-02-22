@@ -9,16 +9,16 @@
     {
       "title": "Power Outage Analysis",
       "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "image": "https://fdanese.github.io/power-outages/assets/confusion_matrix_final_model.png",
       "description": "My final project for DSC 80, where I analyzed power outage data to find trends in time and location. The project included extensive data cleaning, exploratory data analysis, statistical inference, and predictive modeling.",
-      "url": "https://github.com/fdanese/power-outages"
+      "url": "https://fdanese.github.io/power-outages/"
     },
     {
       "title": "My First Website",
       "year": "2024",
       "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "This was my first experience creating a website. I learned the fundamentals of HTML and how to structure content for the web.",
-      "url": "#"
+      "description": "This is the page you're looking at right now! This was my first time creating a website from scratch, and I learned a lot about HTML, CSS, and JavaScript in the process. I will continue to update it as I complete projects.",
+      "url": "https://ferdgitucsd.github.io/portfolio/"
     },
     {
       "title": "Styling with CSS",

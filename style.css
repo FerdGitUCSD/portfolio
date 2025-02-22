@@ -15,7 +15,12 @@ body {
         height: auto;
         display: block;
     }
+    text-align: center;
     
+}
+
+h2.proj {
+    text-align: center;
 }
 
 nav {
@@ -64,25 +69,120 @@ a.current {
     z-index: 1000; 
 }
 
+/* ----------------------------- Profile ----------------------------- */
+
 h2.profile {
-    padding-top: 3rem;
+    padding-top: 1em;
+    text-align: left;
+}
+
+#profile-stats {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+    max-width: 600px;
+}
+
+#profile-stats img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 #profile-stats dl {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px 40px;
+    text-align: center;
 }
+
 #profile-stats dt {
+    font-weight: bold;
     grid-row: 1;
-    text-align: left;
-    color: #888; 
 }
+
 #profile-stats dd {
     grid-row: 2;
-    font-size: 2.5rem; 
-    text-align: left;
-    font-weight: 90;
+    font-size: 1.2em;
+    font-weight: bold;
     margin: 0;
-    padding-bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+    #profile-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #profile-stats dl {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
+
+
+/* ----------------------------- Projects ----------------------------- */
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em;
+}
+
+.projects article {
+    display: grid;
+    grid-template-rows: auto;
+    grid-row: span 3;
+    gap: 0.5em;
+    background-color: var(--background-color);
+    border: 1px solid oklch(50% 10% 200 / 40%);
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.projects article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.projects article h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.projects article h2,
+.projects article p {
+    color: var(--text-color);
+}
+
+.projects article p {
+    margin: 0.5em 0 0;
+}
+
+.project-year {
+    color: rgb(100, 100, 100);
+    font-family: Baskerville, serif;
+    font-variant-numeric: oldstyle-nums;
+    font-size: 1em;
+}
+
+
+img:hover {
+    transform: scale(1.02);
+}
+
+article {
+    transition: transform 0.3s ease-in-out;
+}
+
+article:hover {
+    transform: scale(1.02);
 }
