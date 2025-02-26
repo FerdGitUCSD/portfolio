@@ -145,6 +145,9 @@ circle {
     transition: 200ms;
     transform-origin: center;
     transform-box: fill-box;
+    @starting-style {
+        r: 0;
+      }
   }
 circle.selected {
     fill: #ff6b6b;
@@ -169,3 +172,51 @@ circle:hover {
     stroke-dasharray: 5 3;
     animation: marching-ants 2s linear infinite;
   }
+
+
+/* Fix the grid layout */
+.files > div {
+  display: grid;
+  grid-template-columns: minmax(200px, auto) 1fr; /* Set a minimum width for filenames */
+  gap: 10px; /* Add space between columns */
+}
+
+.files dt {
+  grid-column: 1;
+}
+
+.files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  align-content: end;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+#files-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Add a bit of spacing between rows */
+.files > div {
+  margin-bottom: 10px;
+}
+
+/* Style for each line unit */
+.line {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+/* Style for small text in dt (line count) */
+small {
+  display: block;
+  margin-top: 4px;
+  opacity: 0.8;
+}
