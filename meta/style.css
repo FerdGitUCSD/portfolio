@@ -4,10 +4,10 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", serif;
     font: 100%/1.5;
-    max-width: 100ch;
-    margin-inline: max(1em, (100% - 100ch) / 2);
+    max-width: min(120ch, 80vw);
+    margin-inline: max(1em, (100% - 120ch) / 2);
     
     img {
         max-width: 350px;
@@ -219,4 +219,56 @@ small {
   display: block;
   margin-top: 4px;
   opacity: 0.8;
+}
+
+
+/* scrollytelling */
+
+#scrollytelling {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+/* feel free to play with this to make your scrolly more seemless with your plot */
+#scroll-container {
+  grid-column: 1;
+  position: relative;
+  width: 95%;
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+#chart {
+  grid-column: 2;
+}
+
+#spacer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: none; /* transparent */
+  pointer-events: none;
+}
+
+#items-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.item {
+  height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #eee;
+}
+
+
+:global(body) {
+    max-width: min(120ch, 80vw);
 }

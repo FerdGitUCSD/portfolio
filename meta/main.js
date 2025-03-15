@@ -9,6 +9,21 @@ let filteredCommits = [];
 let filteredLines = [];
 let files = [];
 
+let NUM_ITEMS = 48; // Ideally, let this value be the length of your commit history
+let ITEM_HEIGHT = 70; // Feel free to change
+let VISIBLE_COUNT = 48; // Feel free to change as well
+let totalHeight = (NUM_ITEMS - 1) * ITEM_HEIGHT;
+const scrollContainer = d3.select('#scroll-container');
+const spacer = d3.select('#spacer');
+spacer.style('height', `${totalHeight}px`);
+const itemsContainer = d3.select('#items-container');
+scrollContainer.on('scroll', () => {
+  const scrollTop = scrollContainer.property('scrollTop');
+  let startIndex = Math.floor(scrollTop / ITEM_HEIGHT);
+  startIndex = Math.max(0, Math.min(startIndex, commits.length - VISIBLE_COUNT));
+  renderItems(startIndex);
+});
+
 async function loadData() {
   data = await d3.csv('loc.csv', (row) => ({
     ...row,
@@ -527,4 +542,34 @@ function updateFileVisualization() {
     .append('small')
     .style('display', 'block')
     .html(d => `${d.lines.length} lines`);
+}
+
+function renderItems(startIndex) {
+  // Clear things off
+  itemsContainer.selectAll('div').remove();
+  const endIndex = Math.min(startIndex + VISIBLE_COUNT, commits.length);
+  let newCommitSlice = commits.slice(startIndex, endIndex);
+  // Update the scatterplot
+  updateScatterplot();
+  
+  // Re-bind the commit data to the container and represent each using a div
+  itemsContainer.selectAll('div')
+    .data(newCommitSlice)
+    .enter()
+    .append('div')
+    .style('position', 'absolute')
+    .style('top', (_, idx) => `${idx * ITEM_HEIGHT}px`)
+    // Add the narrative content for each commit
+    .html(commit => {
+      return `
+        <p>
+          On ${commit.datetime.toLocaleString("en", {dateStyle: "full", timeStyle: "short"})}, I made
+          <a href="${commit.url}" target="_blank">
+            ${commit.id.length > 8 ? commit.id.substring(0, 7) + '...' : commit.id}
+          </a>. 
+          I edited ${commit.totalLines} lines across ${d3.rollups(commit.lines, d => d.length, d => d.file).length} files. 
+          Then I looked over all I had made, and I saw that it was very good.
+        </p>
+      `;
+    });
 }
