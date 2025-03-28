@@ -20,13 +20,6 @@ form?.addEventListener('submit', (event) => {
   location.href = url;
 });
 
-
-
-
-
-
-
-
 document.body.insertAdjacentHTML(
     'afterbegin',
     `
@@ -64,7 +57,6 @@ let pages = [
     { url: 'projects/', title: 'Projects' },
     { url: 'resume/', title: 'Resume'},
     { url: 'contact/', title: 'Contact'},
-    { url: 'meta/', title: 'Meta'},
     { url: 'https://github.com/FerdGitUCSD/', title: 'Profile'},
   ];
 

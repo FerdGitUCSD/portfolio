@@ -1,8 +1,15 @@
 [
     {
+    "title": "Wearable Devices and Body Response",
+    "year": "2025",
+    "image": "../images/wearables.png",
+    "description": "This project explored wearable devices and how they can be used to visualize physiological responses. The data comes from a study that measured heart rate, skin temperature, and other attribues of participants during different stress conditions.",
+    "url": "https://ferdgitucsd.github.io/wearables/"
+    },
+    {
       "title": "Bikewatching Visualization",
       "year": "2025",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "image": "../images/bikewatching.png",
       "description": "An interactive map visualization of bike traffic in the Boston area during different times of the day. The data comes from Bluebikes publicly-available bicycle sharing program in the Boston area.",
       "url": "https://ferdgitucsd.github.io/bikewatching/"
     },
@@ -16,7 +23,7 @@
     {
       "title": "My First Website",
       "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "image": "../images/website.png",
       "description": "This is the page you're looking at right now! This was my first time creating a website from scratch, and I learned a lot about HTML, CSS, and JavaScript in the process. I will continue to update it as I complete projects.",
       "url": "https://ferdgitucsd.github.io/portfolio/"
     },
