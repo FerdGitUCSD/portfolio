@@ -196,7 +196,7 @@ ul.legend li .value {
     grid-row: span 3;
     gap: 0.5em;
     background-color: var(--background-color);
-    border: 3px solid oklch(50% 10% 200 / 40%);
+    border: 2px solid oklch(50% 10% 200 / 40%);
     border-radius: 8px;
     padding: 1em;
     box-shadow: 0 4px 8px var(--shadow-color);
