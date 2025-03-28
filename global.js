@@ -129,34 +129,56 @@ export async function fetchJSON(url) {
 
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
-    const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-    if (!validHeadings.includes(headingLevel)) {
-        console.warn(`Invalid heading level: "${headingLevel}". Defaulting to "h2".`);
-        headingLevel = 'h2'; // Set fallback to h2
-    }
-    
-    containerElement.innerHTML = ''; 
+  const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  if (!validHeadings.includes(headingLevel)) {
+      console.warn(`Invalid heading level: "${headingLevel}". Defaulting to "h2".`);
+      headingLevel = 'h2'; // Set fallback to h2
+  }
+  
+  containerElement.innerHTML = ''; 
 
-    for (let project of projects) { 
-        const article = document.createElement('article');
-        if (project.url === '#') {
-          article.innerHTML = `
-            <${headingLevel}>${project.title}</${headingLevel}>
-            <img src="${project.image}" alt="${project.title}">
-            <p>${project.description}</p>
-            <p>c. ${project.year}</p>
-        `;
-        }
-        else {
-          article.innerHTML = `
-            <${headingLevel}>${project.title}</${headingLevel}>
-            <img src="${project.image}" alt="${project.title}">
-            <p>${project.description}</p>
-            <a href="${project.url}" >Link</a>
-            <p>c. ${project.year}</p>
-        `;
-        }
-        containerElement.appendChild(article);
-    }
+  for (let project of projects) { 
+      const article = document.createElement('article');
+      
+      // Create the project title
+      const heading = document.createElement(headingLevel);
+      heading.textContent = project.title;
+      article.appendChild(heading);
+      
+      // Add the image if it exists
+      if (project.image) {
+          const img = document.createElement('img');
+          img.src = project.image;
+          img.alt = project.title;
+          article.appendChild(img);
+      }
+      
+      // Add the description
+      const description = document.createElement('p');
+      description.textContent = project.description;
+      article.appendChild(description);
+      
+      // Add the link with blue button styling
+      if (project.url && project.url !== '#') {
+          const linkContainer = document.createElement('div');
+          linkContainer.className = 'button-container';
+          
+          const link = document.createElement('a');
+          link.href = project.url;
+          link.className = 'button-link';
+          link.textContent = 'Link';
+          
+          linkContainer.appendChild(link);
+          article.appendChild(linkContainer);
+      }
+      
+      // Add the year
+      const yearText = document.createElement('p');
+      yearText.className = 'project-year';
+      yearText.textContent = `c. ${project.year}`;
+      article.appendChild(yearText);
+      
+      containerElement.appendChild(article);
+  }
 }
  

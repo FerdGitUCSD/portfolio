@@ -187,3 +187,40 @@ article {
 article:hover {
     transform: scale(1.02);
 }
+
+
+/* Blue button styling for links */
+.button-link {
+    display: block;
+    width: 100%;
+    margin: 0.5rem auto;
+    padding: 0.4rem 0;
+    background-color: rgba(163, 214, 255, 0.312);
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.1s;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.button-link:hover {
+    background-color: rgba(163, 214, 255, 0.8);
+    transform: translateY(-1px);
+}
+
+.button-link:active {
+    transform: translateY(0);
+}
+
+.button-container {
+    text-align: center;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+/* Fix for standard links in projects */
+.projects article a {
+    flex: 0; /* Override the flex: 1 from general a styling */
+    display: inline-block;
+}
