@@ -22,45 +22,10 @@
     },
     {
       "title": "My First Website",
-      "year": "2024",
+      "year": "2025",
       "image": "../images/website.png",
       "description": "This is the page you're looking at right now! This was my first time creating a website from scratch, and I learned a lot about HTML, CSS, and JavaScript in the process. I will continue to update it as I complete projects.",
       "url": "https://ferdgitucsd.github.io/portfolio/"
-    },
-    {
-      "title": "Styling with CSS",
-      "year": "2025",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "This lab introduced me to CSS, where I learned how to style my website, apply layouts, and enhance visual appeal.",
-      "url": "#"
-    },
-    {
-      "title": "Introduction to JavaScript",
-      "year": "2025",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "This was my first exposure to JavaScript. I learned how to make web pages interactive using event listeners and dynamic content updates.",
-      "url": "#"
-    },
-    {
-      "title": "JavaScript Automation",
-      "year": "2025",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "I explored more advanced JavaScript concepts, including loops, functions, and automating web page behaviors.",
-      "url": "#"
-    },
-    {
-      "title": "Project 1: Expository Visualization",
-      "year": "2025",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "This was my first professionally aimed visualization project, where I used Tableau for the first time. I focused on clarity, storytelling, and effective data representation.",
-      "url": "#"
-    },
-    {
-      "title": "Project 2: Deceptive Visualization",
-      "year": "2025",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "In this project, I created both an earnest and a deceptive visualization to explore their impacts and effectiveness. This helped me understand how data representation influences interpretation.",
-      "url": "#"
     },
     {
       "title": "Analysis of Loan Data and Patterns",

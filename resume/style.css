@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;;
+    font-family: "Roboto", sans-serif;
     font: 100%/1.5;
     max-width: 100ch;
     margin-inline: max(1em, (100% - 100ch) / 2);
@@ -15,6 +15,7 @@ header {
     text-align: center;
     margin-bottom: 30px;
 }
+
 nav {
     display: flex;
     text-align: center;
@@ -33,39 +34,65 @@ nav a:hover {
 section {
     margin-bottom: 30px;
 }
+
 h1 {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 5px;
 }
+
 h2 {
     font-size: 24px;
     font-weight: bold;
     border-bottom: 2px solid oklch(50% 10% 200 / 70%);
     padding-bottom: 5px;
     margin-bottom: 15px;
+    text-align: center;
 }
-
-
 
 h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
 }
+
 p {
     font-size: 14px;
     margin: 5px 0;
 }
+
 ul {
-    display: contents
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
 }
-li {
-    display: contents
+
+/* Override for section lists that use bullet points */
+section ul {
+    display: block;
 }
+
+/* Override for section list items that use bullet points */
+section li {
+    display: list-item;
+}
+
+/* Keep the navigation list and list items as contents */
+nav ul {
+    display: contents;
+}
+
+nav li {
+    display: contents;
+}
+
 a {
-    flex: 1;
     text-decoration: none;
+    color: #0066cc;
+}
+
+nav a {
+    flex: 1;
     color: inherit;
     text-align: center;
     padding: 0.5em;
