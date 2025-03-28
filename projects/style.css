@@ -38,11 +38,7 @@ a.current {
     padding-bottom: calc(0.5em - 0.4em);
 }
 
-div.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    gap: 1em;
-}
+
 
 article {
     grid-template-rows: subgrid;
@@ -184,61 +180,144 @@ ul.legend li .value {
 
 
 /* ----------------------------- Projects ----------------------------- */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    gap: 1em;
+.img-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden !important; /* Force overflow hidden */
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    position: relative; /* Create a positioning context */
 }
 
-.projects article {
+/* Force images to never exceed their container */
+.img-container img {
+    position: absolute;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain !important;
+}/* Project sections styling */
+.section-header {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid oklch(50% 10% 200 / 40%);
+    font-size: 1.75rem;
+}
+
+/* First section header doesn't need as much top margin */
+.section-header:first-of-type {
+    margin-top: 0.5rem;
+}
+
+/* Projects with images styling */
+.projects.with-images {
     display: grid;
-    grid-template-rows: auto;
-    grid-row: span 3;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.projects.with-images article {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
     gap: 0.5em;
-    background-color: var(--background-color);
+    background-color: var(--background-color, white);
     border: 2px solid oklch(50% 10% 200 / 40%);
     border-radius: 8px;
     padding: 1em;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px var(--shadow-color, rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    overflow: hidden; /* Prevent any content from spilling out */
 }
 
-.projects article img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.projects article h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.projects article h2,
-.projects article p {
-    color: var(--text-color);
-}
-
-.projects article p {
-    margin: 0.5em 0 0;
-}
-
-.project-year {
-    color: rgb(100, 100, 100);
-    font-family: Baskerville, serif;
-    font-variant-numeric: oldstyle-nums;
-    font-size: 1em;
-}
-
-
-img:hover {
+.projects.with-images article:hover {
     transform: scale(1.02);
 }
 
-article {
+/* Projects without images styling */
+.projects.without-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em;
+    width: 100%;
+}
+
+.projects.without-images article {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 0.5em;
+    background-color: var(--background-color, #f8f9fa);
+    border: 2px solid oklch(50% 10% 200 / 20%);
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 2px 4px var(--shadow-color, rgba(0, 0, 0, 0.05));
     transition: transform 0.3s ease-in-out;
 }
 
-article:hover {
+.projects.without-images article:hover {
     transform: scale(1.02);
+    border-color: oklch(50% 10% 200 / 40%);
 }
+
+/* Project link styling */
+.project-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 1rem;
+    background-color: oklch(50% 0.2 240 / 13%);
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.project-link:hover {
+    background-color: oklch(50% 0.2 240 / 25%);
+}
+
+/* No results message styling */
+.no-results {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    color: gray;
+}
+
+/* Make section headers full width */
+.section-header {
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+/* Ensure the project containers take full width */
+.section-container {
+    width: 100%;
+    display: block;
+}
+
+/* Fix for container wrapping */
+.projects-wrapper {
+    width: 100%;
+    display: block;
+}
+
+/* Fix for mobile layout */
+@media (max-width: 768px) {
+    .projects.with-images,
+    .projects.without-images {
+        grid-template-columns: 1fr;
+    }
+}
+
